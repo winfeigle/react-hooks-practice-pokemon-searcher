@@ -17,13 +17,17 @@ function PokemonPage() {
   const onSearch = (search) => {
     setSearchQuery(search)
   }
+  
+  const handleFormSubmit = (newPoke) => {
+    setPokemon(prevPokemon => [...prevPokemon, newPoke])
+  }
 
 
   return (
     <Container>
       <h1>Pokemon Searcher</h1>
       <br />
-      <PokemonForm />
+      <PokemonForm onFormSubmit={handleFormSubmit}/>
       <br />
       <Search
         onSearch={onSearch}
