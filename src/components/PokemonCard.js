@@ -3,7 +3,7 @@ import { Card } from "semantic-ui-react";
 
 function PokemonCard({ poke }) {
   const [ sprite, setSprite ] = useState(true);
-  const { id, name, hp, sprites } = poke;
+  const { name, hp, sprites } = poke;
 
   const handleCardClick = () => {
     setSprite(!sprite);
